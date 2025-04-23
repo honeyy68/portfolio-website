@@ -12,12 +12,12 @@ const HeroImg = () => {
   const period = 1000;
 
   useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
+  let ticker = setInterval(() => {
+    tick();
+  }, delta);
 
-    return () => clearInterval(ticker);
-  }, [text, delta, loopNum]);
+  return () => clearInterval(ticker);
+}, [text, delta, loopNum, tick]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
